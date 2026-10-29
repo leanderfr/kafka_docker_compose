@@ -44,7 +44,13 @@ services:
       KAFKA_REST_HOST_NAME: rest-proxy
       KAFKA_REST_LISTENERS: "https://0.0.0.0:8082"
 
-      # Configuração do local do Keystore dentro do container
+      # the file '.p12', needed to make kafka proxy running over HTTPS, can be extracted out of the Kinghost provided certificate
+      # to do this, use the command tip below:
+      # ************************************************************************************************
+      #     openssl pkcs12 -export -in cert.pem -inkey privkey.pem -out abc.p12
+      # ************************************************************************************************
+      # by the way, it took me 10 hours of search and tries to get to this line
+
       KAFKA_REST_SSL_KEYSTORE_LOCATION: /etc/kafka/secrets/abc.p12
       KAFKA_REST_SSL_KEYSTORE_PASSWORD: "123456"
       KAFKA_REST_SSL_KEY_PASSWORD: "123456"
