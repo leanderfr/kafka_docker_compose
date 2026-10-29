@@ -45,7 +45,7 @@ services:
       KAFKA_REST_LISTENERS: "https://0.0.0.0:8082"
 
       # Configuração do local do Keystore dentro do container
-      KAFKA_REST_SSL_KEYSTORE_LOCATION: /etc/kafka/secrets/teste.jks
+      KAFKA_REST_SSL_KEYSTORE_LOCATION: /etc/kafka/secrets/abc.p12
       KAFKA_REST_SSL_KEYSTORE_PASSWORD: "123456"
       KAFKA_REST_SSL_KEY_PASSWORD: "123456"
       KAFKA_REST_SSL_KEYSTORE_TYPE: "JKS"      
